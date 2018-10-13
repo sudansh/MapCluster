@@ -1,6 +1,6 @@
 package com.sudansh.atm.ui
 
-import android.support.v7.util.DiffUtil
+import androidx.recyclerview.widget.DiffUtil
 import com.sudansh.atm.repository.local.db.entity.Atm
 
 class AtmDiffUtil(private val newList: List<Atm>, private val oldList: List<Atm>) : DiffUtil.Callback() {

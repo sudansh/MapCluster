@@ -1,9 +1,9 @@
 package com.sudansh.atm
 
-import android.arch.core.executor.testing.CountingTaskExecutorRule
-import android.arch.persistence.room.Room
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
+import androidx.arch.core.executor.testing.CountingTaskExecutorRule
+import androidx.room.Room
+import androidx.test.InstrumentationRegistry
+import androidx.test.runner.AndroidJUnit4
 import com.sudansh.atm.repository.local.db.AppDatabase
 import org.junit.After
 import org.junit.Assert.assertEquals

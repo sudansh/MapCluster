@@ -1,6 +1,6 @@
 package com.sudansh.atm.di
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import com.sudansh.atm.data.AppExecutors
 import com.sudansh.atm.repository.AtmRepository
 import com.sudansh.atm.repository.local.db.AppDatabase

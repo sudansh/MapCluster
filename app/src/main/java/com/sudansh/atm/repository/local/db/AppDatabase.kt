@@ -1,7 +1,7 @@
 package com.sudansh.atm.repository.local.db
 
-import android.arch.persistence.room.Database
-import android.arch.persistence.room.RoomDatabase
+import androidx.room.Database
+import androidx.room.RoomDatabase
 import com.sudansh.atm.repository.local.db.dao.AtmDao
 import com.sudansh.atm.repository.local.db.entity.Atm
 

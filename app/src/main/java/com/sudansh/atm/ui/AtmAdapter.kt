@@ -1,8 +1,8 @@
 package com.sudansh.atm.ui
 
-import android.databinding.DataBindingUtil
-import android.support.v7.util.DiffUtil
-import android.support.v7.widget.RecyclerView
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.google.android.gms.maps.model.LatLng
@@ -12,7 +12,7 @@ import com.sudansh.atm.databinding.ItemAtmBinding
 import com.sudansh.atm.repository.local.db.entity.Atm
 import com.sudansh.atm.util.toDistance
 
-class AtmAdapter : RecyclerView.Adapter<AtmViewHolder>() {
+class AtmAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<AtmViewHolder>() {
     private val items: MutableList<Atm> = mutableListOf()
     private var myLocation: LatLng? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AtmViewHolder {
@@ -51,7 +51,7 @@ class AtmAdapter : RecyclerView.Adapter<AtmViewHolder>() {
 }
 
 class AtmViewHolder(private val binding: ItemAtmBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+        androidx.recyclerview.widget.RecyclerView.ViewHolder(binding.root) {
 
     fun binding() = binding
 }

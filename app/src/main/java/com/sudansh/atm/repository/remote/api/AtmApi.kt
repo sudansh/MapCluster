@@ -1,6 +1,6 @@
 package com.sudansh.atm.repository.remote.api
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import com.sudansh.atm.data.ApiResponse
 import com.sudansh.atm.repository.local.db.entity.Atm
 import retrofit2.http.GET

@@ -1,8 +1,8 @@
 package com.sudansh.atm.ui
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.sudansh.atm.data.Resource
 import com.sudansh.atm.repository.AtmRepository
 import com.sudansh.atm.repository.local.db.entity.Atm

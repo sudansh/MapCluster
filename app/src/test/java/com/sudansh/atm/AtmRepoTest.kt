@@ -1,8 +1,8 @@
 package com.sudansh.atm
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.Observer
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import com.sudansh.atm.data.Resource
 import com.sudansh.atm.repository.AtmRepository
 import com.sudansh.atm.repository.local.db.dao.AtmDao

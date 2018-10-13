@@ -1,6 +1,6 @@
 package com.sudansh.atm.repository
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import com.sudansh.atm.data.ApiResponse
 import com.sudansh.atm.data.AppExecutors
 import com.sudansh.atm.data.NetworkBoundResource
