@@ -6,14 +6,14 @@ apply plugin: 'kotlin-allopen'
 
 allOpen {
     // allows mocking for classes w/o directly opening them for release builds
-    annotation 'com.sudansh.deliveries.testing.OpenForTesting'
+    annotation 'com.sudansh.listAtm.testing.OpenForTesting'
 }
 
 android {
     compileSdkVersion 28
     dataBinding.enabled = true
     defaultConfig {
-        applicationId "com.sudansh.deliveries"
+        applicationId "com.sudansh.atm"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -70,6 +70,7 @@ dependencies {
     //map
     implementation 'com.google.android.gms:play-services-maps:16.0.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation "com.google.android.gms:play-services-location:16.0.0"
 
     //android support
     implementation "com.android.support:appcompat-v7:$supportLib"
@@ -80,10 +81,6 @@ dependencies {
     //room
     implementation "android.arch.persistence.room:runtime:$room"
     kapt "android.arch.persistence.room:compiler:$room"
-
-    //glide
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
