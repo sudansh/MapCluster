@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Deliveries</string>
+    <string name="title_detail">Delivery Details</string>
+    <string name="title_main">Things to Deliver</string>
+    <string name="transitionImage">transitionImage</string>
+    <string name="transitionDescription">transitionDescription</string>
+    <string name="error_message">Something went wrong. Try Again?</string>
+    <string name="yes">yes</string>
+</resources>
