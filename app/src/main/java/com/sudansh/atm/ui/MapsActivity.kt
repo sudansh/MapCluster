@@ -27,15 +27,16 @@ import com.google.android.gms.maps.model.LatLngBounds
 import com.google.maps.android.clustering.ClusterManager
 import com.sudansh.atm.R
 import com.sudansh.atm.data.Resource
-import com.sudansh.atm.data.Status.*
+import com.sudansh.atm.data.Status.ERROR
+import com.sudansh.atm.data.Status.LOADING
+import com.sudansh.atm.data.Status.SUCCESS
 import com.sudansh.atm.repository.local.db.entity.Atm
 import com.sudansh.atm.util.hideKeyboard
 import com.sudansh.atm.util.observeNonNull
 import com.sudansh.atm.util.snack
 import com.sudansh.atm.util.visible
 import kotlinx.android.synthetic.main.activity_maps.*
-import org.koin.android.ext.android.inject
-
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks, LocationListener {
@@ -43,7 +44,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,
     private var mGoogleApiClient: GoogleApiClient? = null
     private lateinit var mMap: GoogleMap
     private var mClusterManager: ClusterManager<Atm>? = null
-    private val vm: MapsViewModel  by inject()
+    private val vm: MapsViewModel  by viewModel()
     private val rvAdapter by lazy { AtmAdapter() }
 
     override fun onCreate(savedInstanceState: Bundle?) {

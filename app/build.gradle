@@ -10,12 +10,12 @@ allOpen {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     dataBinding.enabled = true
     defaultConfig {
         applicationId "com.sudansh.atm"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -28,12 +28,6 @@ android {
     }
     androidExtensions {
         experimental = true
-    }
-
-    kotlin {
-        experimental {
-            coroutines 'enable'
-        }
     }
 
     testOptions {
@@ -49,7 +43,7 @@ android {
 
 }
 ext {
-    koin_version = '0.9.3'
+    koin_version = '2.0.1'
     retrofit = '2.4.0'
     room = '1.1.1'
     mockito = "2.7.19"
@@ -61,23 +55,23 @@ dependencies {
 
     //android arch
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    testImplementation 'androidx.arch.core:core-testing:2.0.0'
-    androidTestImplementation 'androidx.arch.core:core-testing:2.0.0'
+    testImplementation 'androidx.arch.core:core-testing:2.0.1'
+    androidTestImplementation 'androidx.arch.core:core-testing:2.0.1'
 
     //map
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.maps.android:android-maps-utils:0.5'
-    implementation "com.google.android.gms:play-services-location:16.0.0"
+    implementation "com.google.android.gms:play-services-location:17.0.0"
 
     //android support
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta2'
 
     //room
-    implementation 'androidx.room:room-runtime:2.1.0-alpha01'
-    kapt 'androidx.room:room-compiler:2.1.0-alpha01'
+    implementation 'androidx.room:room-runtime:2.2.0-alpha01'
+    kapt 'androidx.room:room-compiler:2.2.0-alpha01'
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
@@ -86,14 +80,15 @@ dependencies {
 
     //Koin
     implementation "org.koin:koin-android:$koin_version"
-    implementation "org.koin:koin-android-architecture:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     testImplementation "org.koin:koin-test:$koin_version"
     androidTestImplementation "org.koin:koin-test:$koin_version"
 
     //mockito
     testImplementation "org.mockito:mockito-core:$mockito"
     androidTestImplementation "org.mockito:mockito-android:$mockito"
-    testImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.0.0'
     testImplementation 'junit:junit:4.12'
 
     //espresso
@@ -106,5 +101,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.google.code.findbugs', module: 'jsr305'
     })
-    debugImplementation 'com.amitshekhar.android:debug-db:1.0.4'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
 }
